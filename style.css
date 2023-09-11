@@ -1,0 +1,133 @@
+:root {
+  /* Primary */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 40rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.image #img-desktop {
+  height: 100%;
+  width: auto;
+}
+
+.desc {
+  padding: 2.5rem;
+}
+
+.desc h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+.desc h1 {
+  font-family: "Fraunces", serif;
+  color: var(--Very-dark-blue);
+  font-weight: 700;
+}
+
+.desc p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#price {
+  font-family: "Fraunces", serif;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+#price span {
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+button {
+  background-color: var(--Dark-cyan);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: hsl(159, 34%, 21%);
+}
+
+#img-desktop {
+  display: block;
+}
+#img-mobile {
+  display: none;
+}
+/* ganti ke 375 */
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 90%;
+  }
+
+  .container {
+    margin: 7%;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  #img-desktop {
+    display: none;
+  }
+
+  #img-mobile {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+
+  .image #img-mobile {
+    height: auto;
+    width: 100%;
+  }
+}
